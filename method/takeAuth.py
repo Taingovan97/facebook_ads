@@ -1,7 +1,6 @@
 
 
 from selenium import webdriver
-from selenium.webdriver.common.keys import Keys
 from selenium.webdriver.support.ui import WebDriverWait
 
 
@@ -33,4 +32,5 @@ def getCode(code):
     dr.quit()
 
     return num
-
+# code = '6WLL AFVA GL7A R7NB LEKX 5DS5 KBLA C2VP'
+# print(getCode(code))
