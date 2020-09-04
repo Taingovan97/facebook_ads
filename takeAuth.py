@@ -30,5 +30,5 @@ def getCode(code):
     dr.quit()
 
     return num
-code = 'O5GZ S2XB WOY3 NA2M WM4T QGQQ 7VYO 53CB'
+code = '6WLL AFVA GL7A R7NB LEKX 5DS5 KBLA C2VP'
 print(getCode(code))
