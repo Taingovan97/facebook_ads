@@ -12,7 +12,7 @@ class LoginTest(unittest.TestCase):
     def setUp(self):
         self.driver = webdriver.Chrome(executable_path= "C:/Users/Administrator/Downloads/Compressed/chromedriver_win32/chromedriver.exe")
         self.driver.get("https://www.facebook.com")
-        self.driver.maximize_window()
+        #self.driver.maximize_window()
 
     # login
     def testLogin(self):
@@ -20,6 +20,7 @@ class LoginTest(unittest.TestCase):
         fbUsername = 'facebooktool01@gmail.com'
         fbPassword = 'zxczxc3##'
         auth = 'KHKW SCQV 6CMO H2GM VCTP VGYI RDIP 5BHT'        # ma 2FA
+
 
         emailFieldId = "email"
         passFieldId = "pass"
@@ -33,7 +34,6 @@ class LoginTest(unittest.TestCase):
         passFieldElement = WebDriverWait(driver, 3).until(lambda driver: driver.find_element_by_id(passFieldId))
         loginButtonElement = WebDriverWait(driver, 3).until(lambda driver: driver.find_element_by_xpath(loginButtonXpath))
 
-
         # điển tên đăng nhập
         emailFieldElement.clear()
         emailFieldElement.send_keys(fbUsername)
@@ -44,14 +44,14 @@ class LoginTest(unittest.TestCase):
         loginButtonElement.click()
 
         # trường mã xác thực
-        authElement = WebDriverWait(driver, 3).until(lambda driver: driver.find_element_by_id(authID))
+        authElement = WebDriverWait(driver, 5).until(lambda driver: driver.find_element_by_id(authID))
         #authElement.clear()
         key = takeAuth.getCode(auth)
         # nhập key xác thực
         authElement.send_keys(key)
 
         continueXpath = '//button[@value="Tiếp tục"]'
-        continueElement = WebDriverWait(driver, 3).until(lambda driver: driver.find_element_by_xpath(continueXpath))
+        continueElement = WebDriverWait(driver, 5).until(lambda driver: driver.find_element_by_xpath(continueXpath))
         continueElement.click()
         # while continueElement in driver.page_source:
         #     continueElement.click()
