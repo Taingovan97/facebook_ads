@@ -1,25 +1,37 @@
 import unittest
 
-from git_project import takeAuth
+import takeAuth
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 
 
 
 # ham login 2FA
-class LoginTest(unittest.TestCase):
+class LoginTest(object):
+    def __init__(self,
+                 fbUsername,
+                 fbPassword,
+                 code2fa,):
+        self.fbUsername = fbUsername
+        self.fbPassword = fbPassword
+        self.auth=code2fa
+
+
     # khoi tao driver browser
     def setUp(self):
-        self.driver = webdriver.Chrome(executable_path= "C:/Users/Administrator/Downloads/Compressed/chromedriver_win32/chromedriver.exe")
+        self.driver = webdriver.Chrome(executable_path= "C:/Users/Dell/Desktop/Work/fbads/chromedriver.exe")
         self.driver.get("https://www.facebook.com")
         #self.driver.maximize_window()
 
     # login
     def testLogin(self):
         driver = self.driver
-        fbUsername = 'facebooktool01@gmail.com'
-        fbPassword = 'zxczxc3##'
-        auth = 'KHKW SCQV 6CMO H2GM VCTP VGYI RDIP 5BHT'        # ma 2FA
+        # fbUsername = 'facebooktool01@gmail.com'
+        # fbPassword = 'zxczxc3##'
+        # auth = 'KHKW SCQV 6CMO H2GM VCTP VGYI RDIP 5BHT'        # ma 2FA
+        # fbUsername = 'facebooktool01@gmail.com'
+        # fbPassword = 'zxczxc3##'
+        # auth = self.auth      # ma 2FA
 
 
         emailFieldId = "email"
@@ -36,17 +48,17 @@ class LoginTest(unittest.TestCase):
 
         # điển tên đăng nhập
         emailFieldElement.clear()
-        emailFieldElement.send_keys(fbUsername)
+        emailFieldElement.send_keys(self.fbUsername)
         # điền password
         passFieldElement.clear()
-        passFieldElement.send_keys(fbPassword)
+        passFieldElement.send_keys(self.fbPassword)
         # click đăng nhập
         loginButtonElement.click()
 
         # trường mã xác thực
         authElement = WebDriverWait(driver, 5).until(lambda driver: driver.find_element_by_id(authID))
         #authElement.clear()
-        key = takeAuth.getCode(auth)
+        key = takeAuth.getCode(self.auth)
         # nhập key xác thực
         authElement.send_keys(key)
 
@@ -69,5 +81,5 @@ class LoginTest(unittest.TestCase):
     # def tearDown(self):
     #     self.driver.quit()
 
-if __name__ == '__FB_test__':
-    unittest.main()
+# if __name__ == '__FB_test__':
+#     unittest.main()
