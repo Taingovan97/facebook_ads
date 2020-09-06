@@ -2,8 +2,8 @@ from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 
-import constants
-import auth
+from BE import constants, auth
+
 
 def login(fbUsername, fbPassword, code_2fa):
     driver = webdriver.Chrome(executable_path=constants.CHORME_PATH)
