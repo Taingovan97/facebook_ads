@@ -1,15 +1,20 @@
-from selenium import webdriver
-from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
-
+import unittest
+import selenium
 import constants
+from selenium import webdriver
+from selenium.webdriver.common.by import By
+from selenium.webdriver.support.ui import WebDriverWait
 import auth
-import requests
+import pyfacebook
 
+def addPayment(fbUsername, fbPassword, code_2fa, fbUID):
+    driver = webdriver.Chrome(constants.CHROME_PATH)
+    driver.get("https://wwww.facebook.com/ads/manager/account_settings/account_billing/?act="+fbUID+"&pid=p1&page=account_settings&tab=account_billing_settings")
 
-def login(fbUsername, fbPassword, code_2fa, idUser, idFriend = None):
-    driver = webdriver.Chrome(executable_path=constants.CHROME_PATH)
-    driver.get("https://www.facebook.com")
+    # log in nhu fb thong thuong
+    # dropDownId = 'userNavigationLabel'
+    # dropDownEle = driver.find_element_by_id(dropDownId)
+    # dropDownEle.click()
 
     emailFieldId = "email"
     passFieldId = "pass"
@@ -23,7 +28,6 @@ def login(fbUsername, fbPassword, code_2fa, idUser, idFriend = None):
     passFieldElement = WebDriverWait(driver, 3).until(lambda driver: driver.find_element_by_id(passFieldId))
     loginButtonElement = WebDriverWait(driver, 3).until(lambda driver: driver.find_element_by_xpath(loginButtonXpath))
 
-
     # điển tên đăng nhập
     emailFieldElement.clear()
     emailFieldElement.send_keys(fbUsername)
@@ -35,6 +39,7 @@ def login(fbUsername, fbPassword, code_2fa, idUser, idFriend = None):
 
     # trường mã xác thực
     authElement = WebDriverWait(driver, 5).until(lambda driver: driver.find_element_by_id(authID))
+
     key = auth.get_code_2fa(code_2fa)
     print(key)
     # nhập key xác thực
@@ -49,13 +54,6 @@ def login(fbUsername, fbPassword, code_2fa, idUser, idFriend = None):
         continueElement = driver.find_element_by_xpath(continueXpath)
         continueElement.click()
 
-    # get cookie
-    temp = ''
-    for cookie in driver.get_cookies():
-        temp += cookie['name'] + '=' + cookie['value'] + ';' + ''
-
-    if (idFriend != None):
-        requests.request("POST", url= constants.getUrl(idFriend= idFriend), headers= constants.getHeader(idFriend= idFriend, str= temp), data= constants.getPayLoad(idUser= idUser))
-    return driver
 
 
+id = '3732475760114916'
