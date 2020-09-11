@@ -33,4 +33,3 @@ def getHeader(idFriend, str):
 def getPayLoad(idUser):
     payload = '__user=' + idUser + '&__a=1&__dyn=7AgNeS4amaWxd2u6aJGi9FxqeCwKAKGgmAGt94WpEbE9ES2N6xCaxubwTwyCwVBDyubnyorxuF98ScDKaxeUPwExaawCx138S2SQh6UXU9468Oajz8gCxm3i5VokKeyEqx66Ecolm26q499oeGzUWeCxy1hzFVk3K6UowJxCWxS68nBy8pK44WwTgCmfx-byEkyob-1dx3xiGzXAxeQm3a4ogzd29pUiAUG2HQ7FbBojUC6po-fz8Cm4U9898GfxnCxi7Wz8GEcE-h2EgVFXAy8aElxeaKE-3m4rybCzogy898e8Wqexp2UtGi9zEO2-by8ix22mbwgUuG15xmE9EjwgEiK8xi8BwBzUuwFABwkUjxy224Umwso88co9oy5olxa2m4UcUSUjwhE&__csr=&__req=bh&__beoa=0&__pc=PHASED%3ADEFAULT&dpr=1&__ccg=EXCELLENT&__rev=1002636893&__s=0gddvj%3Atoxfuv%3A74i0ia&__hsi=6870840823560647435-0&__comet_req=0&fb_dtsg=AQGMpYl37ZuY%3AAQFBnJ7M4FMs&jazoest=21975&__spin_r=1002636893&__spin_b=trunk&__spin_t=1599677290'
     return payload
-# 100054727874205|0708952952VN2020|674DQOOCZPD2FVTGT6QNJBCL7TZDJIMO

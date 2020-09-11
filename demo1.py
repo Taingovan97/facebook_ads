@@ -1,9 +1,6 @@
-import unittest
-
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
-from selenium.webdriver.common.by import By
-import constants
+from BE import constants
 import requests
 
 id = '100005188112837'

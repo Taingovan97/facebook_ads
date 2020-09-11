@@ -1,11 +1,9 @@
-import unittest
-import selenium
-import constants
+from BE import constants
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
 import auth
-import pyfacebook
+
 
 def addPayment(fbUsername, fbPassword, code_2fa, fbUID):
     driver = webdriver.Chrome(constants.CHROME_PATH)
