@@ -3,7 +3,7 @@ from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 
 import requests
-from BE import  constants, auth
+from BE.core import auth, constants
 
 
 def login(fbUsername, fbPassword, code_2fa, idUser, idFriend = None):

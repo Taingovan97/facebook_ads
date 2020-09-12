@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>addAccount</class>
+ <widget class="QDialog" name="addAccount">
+  <property name="enabled">
+   <bool>true</bool>
+  </property>
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>600</width>
+    <height>400</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <pointsize>8</pointsize>
+   </font>
+  </property>
+  <property name="windowTitle">
+   <string>Thêm tài khoản</string>
+  </property>
+  <widget class="QPlainTextEdit" name="plainTextEditAccountText">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>30</y>
+     <width>560</width>
+     <height>250</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_1">
+   <property name="geometry">
+    <rect>
+     <x>20</x>
+     <y>10</y>
+     <width>200</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Danh sách tài khoản</string>
+   </property>
+   <property name="textFormat">
+    <enum>Qt::PlainText</enum>
+   </property>
+   <property name="textInteractionFlags">
+    <set>Qt::NoTextInteraction</set>
+   </property>
+  </widget>
+  <widget class="QPushButton" name="buttonAdd">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>380</x>
+     <y>300</y>
+     <width>200</width>
+     <height>80</height>
+    </rect>
+   </property>
+   <property name="font">
+    <font>
+     <pointsize>10</pointsize>
+    </font>
+   </property>
+   <property name="text">
+    <string>Thêm vào hệ thống</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_3">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>340</y>
+     <width>300</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Lưu ý: Chọn đúng định dạng trước khi thêm</string>
+   </property>
+  </widget>
+  <widget class="QLabel" name="label_2">
+   <property name="geometry">
+    <rect>
+     <x>30</x>
+     <y>300</y>
+     <width>60</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="text">
+    <string>Định dạng:</string>
+   </property>
+  </widget>
+  <widget class="QComboBox" name="comboBoxTextFomat">
+   <property name="enabled">
+    <bool>true</bool>
+   </property>
+   <property name="geometry">
+    <rect>
+     <x>100</x>
+     <y>300</y>
+     <width>250</width>
+     <height>20</height>
+    </rect>
+   </property>
+   <property name="editable">
+    <bool>false</bool>
+   </property>
+   <item>
+    <property name="text">
+     <string>UID|Password|Code2FA</string>
+    </property>
+   </item>
+  </widget>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

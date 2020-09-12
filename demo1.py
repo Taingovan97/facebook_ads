@@ -1,6 +1,6 @@
 from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
-from BE import constants
+from BE.core import constants
 import requests
 
 id = '100005188112837'

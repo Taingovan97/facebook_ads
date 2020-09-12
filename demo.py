@@ -1,4 +1,4 @@
-from BE import constants
+from BE.core import constants
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from selenium.webdriver.support.ui import WebDriverWait
