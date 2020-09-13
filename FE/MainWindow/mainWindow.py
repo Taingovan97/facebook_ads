@@ -26,10 +26,11 @@ class Main_Window(Ui_MainWindow):
 
     # Other method
     def showTable(self, data):
-        for i in range(0, len(ds)):
-            self.tableAccInfo.setItem(row=i, column=1, item=str(data[0]))
-            self.tableAccInfo.setItem(row=i, column=1, item=str(data[1]))
-            self.tableAccInfo.setItem(row=i, column=1, item=str(data[2]))
+        # for i in range(0, len(ds)):
+        #     self.tableAccInfo.setItem(row=i, column=1, item=str(data[0]))
+        #     self.tableAccInfo.setItem(row=i, column=1, item=str(data[1]))
+        #     self.tableAccInfo.setItem(row=i, column=1, item=str(data[2]))
+        return
 
     # Show UI
     def show(self):
