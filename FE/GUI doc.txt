@@ -1,0 +1,7 @@
+GUI doc:
+Thêm tài khoản:
+	Sau khi thêm, hiện thông báo thêm được x/y tài khoản. Trong đó x là số tài khoản đã được thêm vào hệ thống, y là số tài khoản xác định được ở đoạn text điền vào, số không thêm được là do đã tồn tại uid đó.
+
+Chọn ô tích sẽ chọn tài khoản để thực hiện, chọn ô trên cùng sẽ chọn tất cả, hủy chọn ô trên cùng sẽ hủy chọn tất cả
+
+Xóa tài khoản: Xóa tài khoản đã chọn

@@ -1,10 +1,11 @@
 import sys
 from PyQt5.QtWidgets import QApplication
-from FE.MainWindow.mainWindow import Main_Window
-# from BE.core import constants, api
+from FE.uiController import UIController
+
 
 if __name__ == "__main__":
+
     app = QApplication(sys.argv)
-    main_win = Main_Window()
-    main_win.show()
+    uicontroller = UIController()
+    uicontroller.show_main_window()
     sys.exit(app.exec_())

@@ -1,0 +1,28 @@
+# SQL create table Statement
+# Create table
+"""CREATE TABLE table_name(
+                            column1 data_type PRIMARY KEY AUTOINCREMENT,
+                            column2 TEXT NOT NULL,  # The value is a text string, stored using the database encoding (UTF-8, UTF-16BE or UTF-16LE).
+                            column3 INTEGER,        # The value is a signed integer, stored in 1, 2, 3, 4, 6, or 8 bytes depending on the magnitude of the value.
+                            column4 REAL,           # The value is a floating point value, stored as an 8-byte IEEE floating point number.
+                            column5 BLOB            # The value is a blob of data, stored exactly as it was input.
+                        )"""
+
+# Delete table
+"DROP TABLE table_name"
+
+# Update
+"UPDATE table_name SET column1 = value1, column2 = value2, ... WHERE condition"
+"UPDATE table_name SET column = NULL WHERE column IS NULL"
+
+# Insert
+"INSERT INTO table_name (list, name, column) VALUES (corresponding, column, value)"
+
+# Delete
+"DELETE FROM table_name WHERE condition"
+
+# Add column
+"ALTER TABLE table_name ADD column_name data_type"
+
+# Delete column, Note: Not support in Sqlite3!!!!
+"ALTER TABLE table_name DROP COLUMN column_name"
