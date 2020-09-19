@@ -1,12 +1,3 @@
-# acc 3
-username_clone = '100054940742066'
-pass_clone = '0708952952VN2020'
-key2fa_clone = '7I4O64Z2C2A24WQM2Q3ZYLAHU6OR6FFY'
-# acc 2
-username_via = "100054727874205"
-pass_via = "0708952952VN2020"
-key2fa_via = "674DQOOCZPD2FVTGT6QNJBCL7TZDJIMO"
-
 # Chrome path
 CHROME_PATH = r'C:\Users\Administrator\Downloads\Compressed\chromedriver_win32\chromedriver.exe'
 

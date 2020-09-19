@@ -1,7 +1,7 @@
-from BE.core import api, constants
+from BE.core import api_login, constants
 
 if __name__ == "__main__":
-    driver_clone = api.login(constants.username_clone, constants.pass_clone, constants.key2fa_clone)
+    driver_clone = api_login.login(constants.username_clone, constants.pass_clone, constants.key2fa_clone)
 
     # driver_via = api.login(constants.username_via, constants.pass_via, constants.key2fa_via)
 
