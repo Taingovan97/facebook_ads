@@ -1,5 +1,5 @@
 import requests
-import selenium
+from selenium import webdriver
 from selenium.webdriver.support.ui import WebDriverWait
 from selenium.webdriver.common.by import By
 from selenium.webdriver.common.action_chains import ActionChains
@@ -24,16 +24,12 @@ def getHeader(idFriend, str):
     }
     return headers
 
-# def addFriend(idFriend, cookie):
-#     re = requests.request("GET", url=getUrl(idFriend), headers=getHeader(idFriend,cookie))
-#     return re
-
 def addFriend(driver, idfriend):
-    driver.get('https://www.facebook.com/profile.php?id=' +idfriend)
-    buttonPath = '//button[contains(@aria-label, "as a friend")]'
-    element = WebDriverWait(driver, 5).until(lambda driver: driver.find_element_by_xpath(buttonPath))
-    actions = ActionChains(driver)
-    actions.click(element)
-    actions.perform()
+    driver.get('https://mbasic.facebook.com/' +idfriend)
+
+    buttonPath = '//a[contains(@href,"profile_add_friend.php?subjectid=")]'
+
+    element = driver.find_element_by_xpath(buttonPath)
+    element.click()
 
     return driver

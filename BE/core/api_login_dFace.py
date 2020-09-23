@@ -8,19 +8,18 @@ import time
 
 def login(fbUsername, fbPassword, code_2fa = None):
     driver = webdriver.Chrome(executable_path=constants.CHROME_PATH)
-    driver.get("https://www.facebook.com")
+    driver.get("https://d.facebook.com")
 
-    emailFieldId = "email"
-    passFieldId = "pass"
+    d_email = "m_login_email"
+    d_passname = "pass"
     authID = "approvals_code"
 
-    loginButtonXpath = '//button[@value="1"]'
-    fbLogoXpath = '//a[contains(@href, "logo")]'
+    d_login = '//input[@name="login"]'
 
     # trường username, password và login
-    emailFieldElement = WebDriverWait(driver, 3).until(lambda driver: driver.find_element_by_id(emailFieldId))
-    passFieldElement = WebDriverWait(driver, 3).until(lambda driver: driver.find_element_by_id(passFieldId))
-    loginButtonElement = WebDriverWait(driver, 3).until(lambda driver: driver.find_element_by_xpath(loginButtonXpath))
+    emailFieldElement = WebDriverWait(driver, 3).until(lambda driver: driver.find_element_by_id(d_email))
+    passFieldElement = WebDriverWait(driver, 3).until(lambda driver: driver.find_element_by_name(d_passname))
+    loginButtonElement = WebDriverWait(driver, 3).until(lambda driver: driver.find_element_by_xpath(d_login))
 
     # điển tên đăng nhập
     emailFieldElement.clear()
@@ -38,13 +37,14 @@ def login(fbUsername, fbPassword, code_2fa = None):
         # nhập key xác thực
         authElement.send_keys(key)
 
-        continueXpath = '//button[@value="Tiếp tục"]'
-        continueElement = driver.find_element_by_xpath(continueXpath)
-        continueElement.click()
+        d_send = '//input[@name="submit[Submit Code]"]'
+        sendElement = driver.find_element_by_xpath(d_send)
+        sendElement.click()
 
+        d_continue = '//input[@name="submit[Continue]"]'
         driver.find_elements()
-        while len(driver.find_elements(By.XPATH, continueXpath)) > 0:
-            continueElement = driver.find_element_by_xpath(continueXpath)
+        while len(driver.find_elements(By.XPATH, d_continue)) > 0:
+            continueElement = driver.find_element_by_xpath(d_continue)
             continueElement.click()
 
     time.sleep(3)

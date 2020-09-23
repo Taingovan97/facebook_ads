@@ -1,5 +1,6 @@
 # Chrome path
 CHROME_PATH = r'C:\Users\Administrator\Downloads\Compressed\chromedriver_win32\chromedriver.exe'
+PHANTOM_PATH = r'C:\Users\Administrator\Downloads\Compressed\phantomjs-2.1.1-windows\phantomjs-2.1.1-windows\bin\phantomjs.exe'
 
 def getUrl(idFriend):
     url = "https://www.facebook.com/ajax/add_friend/action/?to_friend=" + idFriend + "&action=add_friend&how_found=profile_button&ref_param=unknown&link_data[gt][type]=xtracking&link_data[gt][xt]=48.%7B%22event%22%3A%22add_friend%22%2C%22intent_status%22%3Anull%2C%22intent_type%22%3Anull%2C%22profile_id%22%3A100007481102571%2C%22ref%22%3A1%7D&link_data[gt][profile_owner]=100007481102571&link_data[gt][ref]=timeline%3Atimeline&logging_location=&http_referer=https%3A%2F%2Fwww.facebook.com%2F%3Fref%3Dtn_tnmn&floc=profile_button&frefs[0]=unknown"
