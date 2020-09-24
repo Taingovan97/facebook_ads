@@ -8,7 +8,7 @@ import time
 
 def login(fbUsername, fbPassword, code_2fa = None):
     driver = webdriver.Chrome(executable_path=constants.CHROME_PATH)
-    driver.get("https://d.facebook.com")
+    driver.get("https://mbasic.facebook.com")
 
     d_email = "m_login_email"
     d_passname = "pass"
