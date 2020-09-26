@@ -13,6 +13,24 @@
     <height>700</height>
    </rect>
   </property>
+  <property name="sizePolicy">
+   <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+    <horstretch>0</horstretch>
+    <verstretch>0</verstretch>
+   </sizepolicy>
+  </property>
+  <property name="minimumSize">
+   <size>
+    <width>1200</width>
+    <height>700</height>
+   </size>
+  </property>
+  <property name="maximumSize">
+   <size>
+    <width>1200</width>
+    <height>700</height>
+   </size>
+  </property>
   <property name="windowTitle">
    <string>Tool Fb Ads</string>
   </property>
@@ -53,11 +71,14 @@
     <property name="editTriggers">
      <set>QAbstractItemView::NoEditTriggers</set>
     </property>
+    <property name="dragDropOverwriteMode">
+     <bool>false</bool>
+    </property>
     <property name="alternatingRowColors">
      <bool>false</bool>
     </property>
     <property name="selectionMode">
-     <enum>QAbstractItemView::NoSelection</enum>
+     <enum>QAbstractItemView::SingleSelection</enum>
     </property>
     <property name="selectionBehavior">
      <enum>QAbstractItemView::SelectRows</enum>
@@ -87,7 +108,7 @@
      <bool>false</bool>
     </attribute>
     <attribute name="horizontalHeaderShowSortIndicator" stdset="0">
-     <bool>false</bool>
+     <bool>true</bool>
     </attribute>
     <attribute name="horizontalHeaderStretchLastSection">
      <bool>true</bool>
@@ -152,7 +173,7 @@
      <rect>
       <x>20</x>
       <y>30</y>
-      <width>250</width>
+      <width>150</width>
       <height>50</height>
      </rect>
     </property>
@@ -163,9 +184,9 @@
    <widget class="QPushButton" name="buttonAddAccount">
     <property name="geometry">
      <rect>
-      <x>930</x>
+      <x>1030</x>
       <y>30</y>
-      <width>250</width>
+      <width>150</width>
       <height>50</height>
      </rect>
     </property>
@@ -195,14 +216,27 @@
    <widget class="QPushButton" name="buttonDeleteAccount">
     <property name="geometry">
      <rect>
-      <x>475</x>
+      <x>830</x>
       <y>30</y>
-      <width>250</width>
+      <width>150</width>
       <height>50</height>
      </rect>
     </property>
     <property name="text">
      <string>Xóa tài khoản đã chọn</string>
+    </property>
+   </widget>
+   <widget class="QPushButton" name="buttonLogin">
+    <property name="geometry">
+     <rect>
+      <x>220</x>
+      <y>30</y>
+      <width>150</width>
+      <height>50</height>
+     </rect>
+    </property>
+    <property name="text">
+     <string>Login</string>
     </property>
    </widget>
   </widget>
@@ -219,8 +253,7 @@
     <property name="title">
      <string>Chức năng</string>
     </property>
-    <addaction name="actionAddBanking"/>
-    <addaction name="actionLogIn"/>
+    <addaction name="actionAddVia"/>
    </widget>
    <widget class="QMenu" name="menuTool">
     <property name="title">
@@ -230,7 +263,20 @@
    <addaction name="menuFunction"/>
    <addaction name="menuTool"/>
   </widget>
-  <widget class="QStatusBar" name="statusbar"/>
+  <widget class="QStatusBar" name="statusbar">
+   <property name="sizePolicy">
+    <sizepolicy hsizetype="Fixed" vsizetype="Fixed">
+     <horstretch>0</horstretch>
+     <verstretch>0</verstretch>
+    </sizepolicy>
+   </property>
+   <property name="maximumSize">
+    <size>
+     <width>16777215</width>
+     <height>20</height>
+    </size>
+   </property>
+  </widget>
   <action name="actionAddBanking">
    <property name="text">
     <string>Add Banking</string>
@@ -239,6 +285,11 @@
   <action name="actionLogIn">
    <property name="text">
     <string>Đăng nhập</string>
+   </property>
+  </action>
+  <action name="actionAddVia">
+   <property name="text">
+    <string>Kết bạn với Via</string>
    </property>
   </action>
  </widget>

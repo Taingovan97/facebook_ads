@@ -1,13 +1,13 @@
 class Account:
     def __init__(self,
                  uid="",
-                 name = "",
+                 name="",
                  password="",
                  code2fa="",
-                 cookie = "",
-                 token = "",
+                 cookie="",
+                 token="",
                  bank="",
-                 status = "",
+                 status="",
                  ):
         self.__uid = uid
         self.__name = name

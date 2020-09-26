@@ -1,8 +1,10 @@
 # Convert, Note: cd to project folder before execute
 # Command line convert gui.ui to gui.py with main function
-pyuic5 -x FE\AddAccount\addAccount_UI.ui -o FE\AddAccount\addAccount_UI_PY.py
 pyuic5 -x FE\MainWindow\mainWindow_UI.ui -o FE\MainWindow\mainWindow_UI_PY.py
+pyuic5 -x FE\AddAccount\addAccount_UI.ui -o FE\AddAccount\addAccount_UI_PY.py
+pyuic5 -x FE\AddVia\addVia_UI.ui -o FE\AddVia\addVia_UI_PY.py
 
 # Command line convert gui.ui to gui.py without main function
-pyuic5 FE\AddAccount\addAccount_UI.ui -o FE\AddAccount\addAccount_UI_PY.py
 pyuic5 FE\MainWindow\mainWindow_UI.ui -o FE\MainWindow\mainWindow_UI_PY.py
+pyuic5 FE\AddAccount\addAccount_UI.ui -o FE\AddAccount\addAccount_UI_PY.py
+pyuic5 FE\AddVia\addVia_UI.ui -o FE\AddVia\addVia_UI_PY.py

@@ -26,3 +26,6 @@
 
 # Delete column, Note: Not support in Sqlite3!!!!
 "ALTER TABLE table_name DROP COLUMN column_name"
+
+# Select row
+"SELECT * FROM table_name WHERE condition"

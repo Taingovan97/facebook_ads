@@ -9,8 +9,6 @@ def login(fbUsername, fbPassword, acc = None):
     driver = webdriver.Chrome(executable_path=constants.CHROME_PATH)
     driver.get("https://www.facebook.com")
 
-
-
     emailFieldId = "email"
     passFieldId = "pass"
     #authID = "approvals_code"
