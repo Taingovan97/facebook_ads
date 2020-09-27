@@ -43,10 +43,12 @@ def login(fbUsername, fbPassword, code_2fa = None):
 
         d_continue = '//input[@name="submit[Continue]"]'
         driver.find_elements()
-        while len(driver.find_elements(By.XPATH, d_continue)) > 0:
-            continueElement = driver.find_element_by_xpath(d_continue)
-            continueElement.click()
-
+        try:
+            while len(driver.find_elements(By.XPATH, d_continue)) > 0:
+                continueElement = driver.find_element_by_xpath(d_continue)
+                continueElement.click()
+        except:
+            return None, ""
     time.sleep(3)
     # get cookie
     temp = driver.get_cookies()

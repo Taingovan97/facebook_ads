@@ -9,8 +9,19 @@ from FacebookWebBot import *
 from selenium import webdriver
 from BE.core import api_addFr, api_login_dFace, api_accept_friend
 
-driv, cookie = api_login_dFace.login(fbUsername='100020276508848', fbPassword='nguyenhonganh_safe_pw_2020081912', code_2fa='KQFW ZBBJ 4KK4 WCB4 TCJT MM7L TW72 HLFA' )
+#driv, cookie = api_login_dFace.login(fbUsername='100020276508848', fbPassword='nguyenhonganh_safe_pw_2020081912', code_2fa='KQFW ZBBJ 4KK4 WCB4 TCJT MM7L TW72 HLFA' )
+#
+# api_addFr.addFriend(driv, '100054827978833')
+#driv2, cookie2 = api_login_dFace.login(fbUsername='100054827978833', fbPassword='0708952952VN2020', code_2fa='2DYUIJJDCBUU43QZKGZIZFU5L2GTRP2X' )
+# api_accept_friend.acceptFr(driv2)
 
-api_addFr.addFriend(driv, '100054827978833')
-driv2, cookie2 = api_login_dFace.login(fbUsername='100054827978833', fbPassword='0708952952VN2020', code_2fa='2DYUIJJDCBUU43QZKGZIZFU5L2GTRP2X' )
-api_accept_friend.acceptFr(driv2)
+from BE import Account
+from BE import facebook
+acc1 = Account(uid='100020276508848', password= 'nguyenhonganh_safe_pw_2020081912', code2fa= 'KQFW ZBBJ 4KK4 WCB4 TCJT MM7L TW72 HLFA')
+fa1 = facebook(acc=acc1)
+#fa1.login()
+
+acc2 = Account(uid='100054827978833', password='0708952952VN2020', code2fa='2DYUIJJDCBUU43QZKGZIZFU5L2GTRP2X')
+fa2 = facebook(acc2)
+#fa1.addFriend(fa2.acc.uid)
+print(fa2.login())
