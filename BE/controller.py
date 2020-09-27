@@ -1,6 +1,8 @@
 from .dao import AccountDao
 from .dao import Account
-from .utils_BE import check_unavailable_list
+from .utils_BE import check_unavailable_list, get_available_account
+
+from .core import facebook
 
 
 class Controller:
@@ -21,15 +23,19 @@ class Controller:
         else:
             return self.__accountDao.getSelectedListAccount(tuple(listUid))
 
-    def login_list(self):
-        pass
+    def login_list(self, listUid: list):
+        listAvailableList = get_available_account(listUid=listUid, listAvailableAccount=self.listAccount)
+        listFb = []
+        for acc in listAvailableList:
+            fb = facebook(acc)
+            fb.login()
+            listFb.append(fb)
 
     def login(self,
               uid,
               password,
               code2fa,
               ):
-        # login()
         pass
 
     def add_account(self, account: Account):

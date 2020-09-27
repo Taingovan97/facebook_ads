@@ -44,11 +44,12 @@ class Main_Window(Ui_MainWindow, Window):
         self.buttonCreateScript.clicked.connect(self.createScript)
         self.checkBoxAll.stateChanged.connect(self.checkAll)
         self.tableAccInfo.itemClicked.connect(self.handleItemClicked)
+        self.buttonLogin.clicked.connect(self.login)
         # self.buttonLogin(self.login)
 
     # Connect signals method
     def login(self):
-        Window._service.login()
+        Window._service.login(listUid=self.selectedList)
 
     def createScript(self):
         print("Script")

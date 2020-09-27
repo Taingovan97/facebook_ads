@@ -19,8 +19,11 @@ class facebook:
         self.acc.cookie = cookie
 
     def login(self):
-        self.driver, self.acc.cookie = login(self.acc.uid, self.acc.password, self.acc.code2fa)
-        if (self.driver is None):
+        try:
+            self.driver, self.acc.cookie = login(self.acc.uid, self.acc.password, self.acc.code2fa)
+        except:
+            pass
+        if self.driver is None:
             return 2
         else:
             return 1

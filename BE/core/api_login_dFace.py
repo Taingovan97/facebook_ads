@@ -49,7 +49,7 @@ def login(fbUsername, fbPassword, code_2fa = None):
                 continueElement.click()
         except:
             return None, ""
-    time.sleep(3)
+    # time.sleep(3)
     # get cookie
     temp = driver.get_cookies()
     cookie = ''

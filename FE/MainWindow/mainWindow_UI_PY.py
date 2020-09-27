@@ -72,7 +72,7 @@ class Ui_MainWindow(object):
         self.tableAccInfo.horizontalHeader().setMinimumSectionSize(20)
         self.tableAccInfo.horizontalHeader().setSortIndicatorShown(True)
         self.tableAccInfo.horizontalHeader().setStretchLastSection(True)
-        self.tableAccInfo.verticalHeader().setVisible(False)
+        self.tableAccInfo.verticalHeader().setVisible(True)
         self.tableAccInfo.verticalHeader().setHighlightSections(False)
         self.tableAccInfo.verticalHeader().setMinimumSectionSize(30)
         self.buttonCreateScript = QtWidgets.QPushButton(self.centralwidget)

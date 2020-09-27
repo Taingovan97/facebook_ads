@@ -38,7 +38,7 @@ class Service:
 
     """Start Main Window service"""
     def login(self, listUid: list):
-        self.__controller.login(list)
+        self.__controller.login_list(listUid)
 
     """Start Add Via service"""
     def add_via(self):

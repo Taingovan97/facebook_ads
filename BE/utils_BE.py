@@ -22,3 +22,19 @@ def check_unavailable_list(listAccount: list, listAvailableAccount: list):
             listUnavailableAcc.append(tuple(acc))
     listUnavailableAcc = tuple(listUnavailableAcc)
     return listUnavailableAcc
+
+
+def get_available_account(listUid: list, listAvailableAccount: list):
+    listAccounts = []
+    for uid in listUid:
+        flag = False
+        acc_available = None
+        for acc in listAvailableAccount:
+            if uid == acc.uid:
+                acc_available = acc
+                flag = True
+                break
+        if flag:
+            listAccounts.append(acc_available)
+
+    return listAccounts
